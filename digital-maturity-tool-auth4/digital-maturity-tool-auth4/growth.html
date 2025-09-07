@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Growth Planner • Digital Maturity</title>
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <div class="logo">
+        <svg viewBox="0 0 24 24" fill="none"><path d="M3 12l6 6L21 6" stroke="#8fb4ff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <strong>Digital Maturity Tool</strong>
+      </div>
+      <div class="top-nav">
+        <a class="btn secondary" href="home.html">Home</a>
+        <a class="btn secondary" href="results.html">Results</a>
+        <button class="btn" id="logoutBtn">Log out</button>
+      </div>
+    </div>
+
+    <div class="card" id="planner">
+      <h1>Growth Planner</h1>
+      <div class="row">
+        <div>
+          <label>Pick a category</label>
+          <select id="catSelect" class="input"></select>
+          <div class="footer-actions">
+            <button class="btn" id="loadActions">Load actions</button>
+          </div>
+        </div>
+      </div>
+
+      <div id="plannerActions" style="margin-top:10px"></div>
+
+      <div class="footer-actions">
+        <button class="btn" id="exportPlanTxt">Export plan (TXT)</button>
+        <button class="btn secondary" id="exportPlanPng">Export plan (PNG)</button>
+        <button class="btn secondary" id="exportPlanPdf">Export plan (PDF)</button>
+      </div>
+      <p class="small">PNG/PDF capture the actions you’ve filled in below.</p>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jspdf@2.5.1/dist/jspdf.umd.min.js"></script>
+  <script src="assets/js/auth.js"></script>
+  <script src="assets/js/app.js"></script>
+  <script>window.addEventListener('DOMContentLoaded', App.initGrowth)</script>
+</body>
+</html>
